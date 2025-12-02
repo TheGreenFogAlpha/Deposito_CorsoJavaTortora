@@ -11,6 +11,9 @@ public class Treno extends Veicolo {
 		if (velocita < 30f || velocita > 350f) {
 		throw new VeicoloNonValidoException("velocita out of range (30-350 km/h)");
 		}
+		if(modello.equalsIgnoreCase("Freccia Rossa") && regionale) {
+			throw new VeicoloNonValidoException("Il Freccia Rossa non e' un treno regionale");
+		}
 		this.regionale = regionale;
 	}
 

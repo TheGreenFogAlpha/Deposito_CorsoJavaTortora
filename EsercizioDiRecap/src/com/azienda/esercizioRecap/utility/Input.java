@@ -16,7 +16,7 @@ public class Input {
 
 	public static float readFloat (Scanner sc, String input) {
 		do {
-			System.out.println(input + "(true/false): ");
+			System.out.println(input + ": ");
 			String s=sc.nextLine().trim();
 			try {
 				return Float.parseFloat(s);
